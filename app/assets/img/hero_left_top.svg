@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="622px" height="402px" viewBox="0 0 622 402" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Left top</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="64.5313456%" y1="13.1288297%" x2="53.2580092%" y2="32.8581341%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="27.4225266%" y1="16.6821972%" x2="0%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#40DF6D" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#40DF6D" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="hero_left_corner" transform="translate(-148.000000, -86.000000)">
+            <g id="Left-top">
+                <path d="M1143.6,0 L1097.2944,46.284704 C1082.8912,60.6814043 1063.3568,68.7689531 1042.9888,68.7689531 L847.4112,68.7689531 C827.0432,68.7689531 807.5088,76.8565018 793.1056,91.2532022 L699.6944,184.622249 C685.2912,199.018949 665.7568,207.106498 645.3888,207.106498 L458.6112,207.106498 C438.2432,207.106498 418.7088,215.194047 404.3056,229.590747 L0,633.713899" id="Stroke-3" stroke="url(#linearGradient-1)" stroke-width="2" opacity="0.0799999982"></path>
+                <path d="M793.6,91.2532022 L700.1888,184.622249 C685.7856,199.018949 666.2512,207.106498 645.8832,207.106498 L459.1056,207.106498 C438.7376,207.106498 419.2032,215.194047 404.8,229.590747" id="Stroke-7" stroke="url(#linearGradient-2)" stroke-width="2"></path>
+                <circle id="Oval" fill="#40DF6D" cx="405" cy="229" r="4"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

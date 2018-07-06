@@ -1,0 +1,185 @@
+.sform {
+	&__group {
+		margin-bottom: 16px;
+		&-label {
+			font-family: 'Source Sans Pro', sans-serif;
+			font-size: 1.6rem;
+			font-weight: 600;
+			display: block;
+			margin-bottom: 4px;
+			font-style: normal;
+		}
+		&-field {
+			outline: none;
+			font-family: 'Source Sans Pro', sans-serif;
+			font-size: 1.8rem;
+			height: 48px;
+			border: solid 1px rgba($primary, 0.16);
+			background-color: $white;
+			border-radius: 4px;
+			width: 100%;
+			padding-left: 16px;
+			padding-right: 16px;
+			&:focus {
+				box-shadow: 0 2px 8px rgba($primary, 0.08);
+			}
+			&--error {
+				border-color: red;
+			}
+		}
+		&-hint {
+			display: block;
+			font-size: 1.4rem;
+			color: rgba($primary, 0.64);
+			margin-top: 4px;
+		}
+		&-inline {
+			display: flex;
+			flex-direction: row;
+			&--pcode {
+				.sform__group-field:first-child {
+					flex: 1;
+					border-right: 0;
+					border-top-right-radius: 0;
+					border-bottom-right-radius: 0;
+				}
+				.sform__group-field:last-child {
+					flex: 3;
+					border-top-left-radius: 0;
+					border-bottom-left-radius: 0;
+				}
+			}
+		}
+		&-checkbox {
+			position: relative;
+			display: block;
+			margin-bottom: 24px;
+			padding-left: 40px;
+			input[type='checkbox'] {
+				position: absolute;
+				left: 2px;
+				top: 2px;
+				z-index: 2;
+				transform: scale(2);
+				opacity: 0;
+				cursor: pointer;
+				&:hover + .sform__group-checkbox-sub {
+					border: solid 1px rgba($primary, 0.18);
+					box-shadow: 0 2px 8px rgba($primary, 0.12);
+				}
+				&:checked + .sform__group-checkbox-sub {
+					background-color: $green;
+					border-color: $green;
+					box-shadow: none;
+					&::before {
+						content: "";
+						position: absolute;
+						left: 6px;
+						top: 11px;
+						width: 2px;
+						height: 6px;
+						display: block;
+						background-color: $white;
+						transform: rotate(-45deg);
+					}
+					&::after {
+						content: "";
+						position: absolute;
+						left: 12px;
+						top: 5px;
+						width: 2px;
+						height: 13px;
+						display: block;
+						background-color: $white;
+						transform: rotate(45deg);
+					}
+				}
+			}
+			&-sub {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 24px;
+				height: 24px;
+				border: solid 1px rgba($primary, 0.18);
+				background-color: $white;
+				border-radius: 4px;
+			}
+			&-desc {
+				font-size: 1.6rem;
+				color: rgba($primary, 0.64);
+			}
+		}
+		&-error {
+			color: red;
+			font-size: 1.4rem;
+			display: block;
+			margin-top: 4px;
+		}
+	}
+}
+
+// Buttons
+
+.btn {
+	position: relative;
+	outline: none;
+	text-align: center;
+	height: 48px;
+	border: 0;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: 1.8rem;
+	line-height: 1.2;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	border-radius: 4px;
+	background-color: rgba($primary, 0.16);
+	padding-left: 32px;
+	padding-right: 32px;
+	&--primary {
+		background-color: $green;
+		color: $white;
+		&:hover {
+			background-color: lighten($green, 8%);
+		}
+		&:active {
+			bottom: -1px;
+			background-color: darken($green, 8%);
+		}
+	}
+	&--dark {
+		background-color: lighten($primary, 8%);
+		color: $white;
+		&:hover {
+			background-color: lighten($primary, 12%);
+		}
+		&:active {
+			bottom: -1px;
+			background-color: lighten($primary, 8%);
+		}
+	}
+	&--sm {
+		height: 32px;
+		font-size: 1.4rem;
+		font-weight: 700;
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+	&--wide {
+		width: 100%;
+	}
+}
+
+
+
+
+
+
+
+
+
+

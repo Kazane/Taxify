@@ -1,0 +1,112 @@
+.hero {
+	color: $white;
+	background-color: $primary;
+	position: relative;
+	overflow: hidden;
+	&::before {
+		@include media(md) {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: block;
+			width: 622px;
+			height: 402px;
+			background: url(../../../assets/img/hero_left_top.svg) 0 0 no-repeat;
+			pointer-events: none;
+			z-index: 0;
+		}
+	}
+	&::after {
+		@include media(md) {
+			content: "";
+			position: absolute;
+			right: -50%;
+			bottom: -128px;
+			display: block;
+			width: 1431px;
+			height: 828px;
+			background: url(../../../assets/img/hero_right_bottom.svg) 0 0 no-repeat;
+			pointer-events: none;
+			z-index: 0;
+		}
+		@include media(lg) {
+			right: 0;
+		}
+	}
+	&__container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding-top: 64px;
+		padding-bottom: 64px;
+		padding-left: 24px;
+		padding-right: 24px;
+		@include media(sm) {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			padding-top: 80px;
+			padding-bottom: 80px;
+			padding-left: 48px;
+			padding-right: 48px;
+		}
+		@include media(md) {
+			flex-direction: row;
+			display: flex;
+			align-items: center;
+		}
+		@include media(lg) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	&__title {
+		font-size: 4rem;
+		margin-bottom: 16px;
+		color: $white;
+		@include media(md) {
+			font-size: 5.2rem;
+		}
+	}
+	&__side {
+		position: relative;
+		z-index: 2;
+		margin-bottom: 24px;
+		@include media(sm) {
+			flex: 1 0 calc(100% / 1.5);
+			max-width: calc(100% / 1.5);
+		}
+		@include media(md) {
+			flex: 1 0 calc(100% / 2);
+			max-width: calc(100% / 2);
+			padding-right: 64px;
+			margin-bottom: 0;
+			padding-bottom: 64px;
+		}
+	}
+	&__form {
+		width: 100%;
+		display: none;
+		@include media(md) {
+			display: block;
+			flex: 1 0 calc(100% / 2);
+			max-width: calc(100% / 2);
+			padding-left: 64px;
+		}
+		&-basis {
+			position: relative;
+			z-index: 2;
+			background-color: $white;
+			border-radius: 6px;
+			padding: 24px;
+			color: $primary;
+			@include media(md) {
+				padding: 32px;
+			}
+		}
+		&-undr {
+			display: block;
+			text-align: center;
+		}
+	}
+}

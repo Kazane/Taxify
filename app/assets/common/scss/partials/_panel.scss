@@ -1,0 +1,134 @@
+.panel {
+	position: relative;
+	@include media(md) {
+		display: grid;
+		height: 100%;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	&__logo {
+		position: absolute;
+		left: 24px;
+		top: 14px;
+		z-index: 5;
+		img {
+			display: block;
+			filter: brightness(-100%);
+		}
+		@include media(sm) {
+			left: 32px;
+		}
+		@include media(md) {
+			img {
+				filter: brightness(100%);
+			}
+		}
+	}
+	&__lang {
+		display: inline-flex;
+		align-items: center;
+		font-size: 1.4rem;
+		color: $primary;
+		margin-right: 16px;
+		order: 1;
+		span {
+			display: none;
+			@include media(md) {
+				display: block;
+			}
+		}
+		i {
+			margin-right: 8px;
+		}
+		@include media(sm) {
+			order: 2;
+			margin-right: 0;
+			margin-left: 32px;
+		}
+	}
+	&__quote {
+		display: none;
+		@include media(md) {
+			background-color: $primary;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding: 64px;
+			position: relative;
+		}
+		@include media(lg) {
+			padding: 128px;
+		}
+		&-container {
+			max-width: 472px;
+			position: relative;
+			z-index: 2;
+		}
+		&-bgimage {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			pointer-events: none;
+			user-select: none;
+			img {
+				display: block;
+				object-fit: cover;
+				width: 100%;
+				height: 100%;
+				opacity: 0.4;
+			}
+		}
+	}	
+	&__action {
+		padding: 24px;
+		padding-top: 128px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@include media(md) {
+			justify-content: center;
+			padding: 64px;
+		}
+		@include media(lg) {
+			padding: 128px;
+		}
+	}
+	&__heading {
+		font-size: 4rem;
+		margin-bottom: 16px;
+		color: $white;
+		@include media(md) {
+			font-size: 5.2rem;
+		}
+	}
+	&__form {
+		max-width: 472px;
+	}
+	&__active-corner {
+		position: absolute;
+		right: 24px;
+		top: 34px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		.txt--sm {
+			display: none;
+		}
+		.btn {
+			order: 2;
+			@include media(md) {
+				order: 1;
+			}
+		}
+		@include media(sm) {
+			right: 32px;
+			.txt--sm {
+				display: block;
+				margin-right: 16px;
+			}
+		}
+	}
+}
